@@ -8,7 +8,7 @@ import { Status } from "../constants/status";
 import "../styles/app.css";
 
 function InProgress() {
-  const { todos, dispatch } = useContext(TodosContext);
+  const { todos } = useContext(TodosContext);
 
   return (
     <div className="menu">
