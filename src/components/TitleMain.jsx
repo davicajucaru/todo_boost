@@ -1,10 +1,10 @@
 import { Text } from "@chakra-ui/react";
 import React from "react";
 
-const TitleMain = () => {
+const TitleMain = ({ text }) => {
   return (
     <div>
-      <Text fontSize="5xl">To Do List</Text>
+      <Text fontSize="5xl">{text}</Text>
     </div>
   );
 };

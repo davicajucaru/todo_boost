@@ -6,8 +6,8 @@
 
 .main {
   width: min(70vh, 800px);
-  height: 100%;
-  margin: auto;
+
+  margin: 10px auto;
 
   display: flex;
 

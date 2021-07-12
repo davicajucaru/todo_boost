@@ -1,0 +1,30 @@
+name: deploy
+on:
+  push:
+    branches: [main]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: install node
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: install-dependencies
+        run: yarn install
+
+      - name: run tests
+        run: yarn test
+
+      - name: build
+        run: yarn build
+
+      - name: deploy
+        run: npx netlify-cli deploy --dir=build --message="${{github.event.head_commit.message}}" --prod
+        env:
+          NETLIFY_AUTH_TOKEN: ${{secrets.NETLIFY_TOKEN}}
+          NETLIFY_SITE_ID: ${{secrets.NETLIFY_ID}}

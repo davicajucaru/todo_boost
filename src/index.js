@@ -1,15 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./styles/index.css";
-import App from "./pages/App";
+import Routes from "./Routes";
 import reportWebVitals from "./reportWebVitals";
 
 import { ChakraProvider } from "@chakra-ui/react";
 
+import { TodosProvider } from "./components/TodosContext";
+
 ReactDOM.render(
   <React.StrictMode>
     <ChakraProvider>
-      <App />
+      <TodosProvider>
+        <Routes />
+      </TodosProvider>
     </ChakraProvider>
   </React.StrictMode>,
   document.getElementById("root")

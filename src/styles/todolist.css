@@ -1,0 +1,54 @@
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.list ul {
+  width: 100%;
+  padding: 0;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  list-style: none;
+  width: 100%;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  height: 55px;
+
+  padding: 0 0 0 25px;
+}
+
+.list li #done {
+  border: solid 1px green;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: white;
+
+  margin: 0 5px 0 5px;
+}
+
+.list li#done:hover {
+  background-color: green;
+}
+
+.list li #delete {
+  border: solid 1px red;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: white;
+
+  margin: 0 5px 0 5px;
+}
+
+.list li#delete:hover {
+  background-color: red;
+}
