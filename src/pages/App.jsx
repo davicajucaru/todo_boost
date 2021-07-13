@@ -16,8 +16,6 @@ function App() {
 
   const { todos, dispatch } = useContext(TodosContext);
 
-  console.log(todos);
-
   const handleSubmit = useCallback(
     (event) => {
       event.preventDefault();
