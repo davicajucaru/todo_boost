@@ -36,7 +36,7 @@ function App() {
       <Menu />
       <div className="main">
         <form onSubmit={handleSubmit} className="main">
-          <TitleMain text="To Do" />
+          <TitleMain text="To Do List" />
           <InputMain value={value} setValue={setValue} />
           <ButtonMain value={value} />
         </form>
