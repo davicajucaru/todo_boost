@@ -3,6 +3,6 @@ import ButtonMain from "./ButtonMain";
 
 test("Button render", () => {
   render(<ButtonMain />);
-  const buttonrender = screen.getByText(/Adicionar/i);
+  const buttonrender = screen.getByText(/Add/i);
   expect(buttonrender).toBeInTheDocument();
 });
