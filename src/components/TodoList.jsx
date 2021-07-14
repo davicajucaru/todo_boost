@@ -28,15 +28,11 @@ const TodoList = ({ todo }) => {
     [todo, dispatch]
   );
 
-  console.log(todo);
-
   return (
     <div className="list main">
-      <ListItem
-        style={{ textDecoration: todo.isCompleted ? "line-through" : "none" }}
-      >
+      <ListItem>
         {todo.title}
-        <div>
+        <div className="select-group">
           <Select
             onChange={(select) => handleToggle(select.target.value)}
             name=""
@@ -46,12 +42,6 @@ const TodoList = ({ todo }) => {
             <option value={Status.IN_PROGRESS}> in progress</option>
             <option value={Status.DONE}>done</option>
           </Select>
-        </div>
-        <div>
-          {/* <button id="done" onClick={handleToggle}>
-            <img alt="done" src="/correct-symbol.svg" />
-          </button> */}
-
           <button id="delete" onClick={handleDelete}>
             <img alt="delete" src={ImgDelete} />
           </button>

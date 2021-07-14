@@ -23,23 +23,12 @@
   padding: 0 0 0 25px;
 }
 
-.list li #done {
-  border: solid 1px green;
-
-  width: 40px;
-  height: 40px;
-
-  background-color: white;
-
-  margin: 0 5px 0 5px;
-}
-
-.list li#done:hover {
-  background-color: green;
-}
-
 .list li #delete {
   border: solid 1px red;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 40px;
   height: 40px;
@@ -51,4 +40,8 @@
 
 .list li#delete:hover {
   background-color: red;
+}
+
+.select-group {
+  display: flex;
 }
