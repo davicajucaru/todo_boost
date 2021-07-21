@@ -2,10 +2,11 @@ import React from "react";
 
 import { Button } from "@chakra-ui/react";
 
-const ButtonMain = ({ value }) => {
+const ButtonMain = ({ value, id }) => {
   return (
     <div>
       <Button
+        id={id}
         size="md"
         height="48px"
         width="200px"

@@ -38,7 +38,7 @@ function App() {
         <form onSubmit={handleSubmit} className="main">
           <TitleMain text="RAMYRES É O MELHOR" />
           <InputMain value={value} setValue={setValue} />
-          <ButtonMain value={value} />
+          <ButtonMain id="main-button" value={value} />
         </form>
 
         <UnorderedList>
